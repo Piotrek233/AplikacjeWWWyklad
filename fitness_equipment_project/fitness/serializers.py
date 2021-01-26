@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class EquipmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Equipment
-        fields = '__all__'
+        fields = ['name','type','destiny','user']
 
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,6 +14,7 @@ class RatingSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class UserSerializer(serializers.ModelSerializer):
-    class Mate:
+    class Meta:
         model = User
-        fields = ['id','last_login','is_superuser','username','email','data_joined']
+        fields = ['id','last_login','is_superuser','username','email','date_joined','password']
+        extra_kwargs = {'last_login':{'read_only':True},'date_joined':{'read_only':True}}

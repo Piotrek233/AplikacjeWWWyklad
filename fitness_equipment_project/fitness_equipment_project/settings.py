@@ -128,7 +128,7 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':
-    'fitness.custom_pagination.LimitOffsetPaginationWithUpperBound',
+    'fitness.custompagination.LimitOffsetPaginationWithUpperBound',
     'PAGE_SIZE': 5,
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',

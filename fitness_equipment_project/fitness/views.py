@@ -20,7 +20,7 @@ class EquipmentList(generics.ListCreateAPIView):
 class RatingList(generics.ListCreateAPIView):
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
-    name = 'equipments'
+    name = 'rating'
     filterset_fields = ['subject', 'value']
     permission_classes = [IsAuthenticated]
     search_fields = ['subject']
@@ -39,7 +39,7 @@ class RatingDetail(generics.RetrieveUpdateDestroyAPIView):
     name = 'rating'
     permission_classes = [IsAuthenticated]
 
-class UserList(generics.ListAPIView):
+class UserList(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     name = 'users'

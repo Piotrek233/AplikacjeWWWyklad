@@ -8,7 +8,7 @@ from .views import UserList
 from .views import UserDetail
 
 urlpatterns = [
-    path('equimpent',EquipmentList.as_view(), name=EquipmentList.name),
+    path('equipment',EquipmentList.as_view(), name=EquipmentList.name),
     path('rating', RatingList.as_view(), name= RatingList.name),
     path('rating/<int:pk>',RatingDetail.as_view(), name=RatingDetail.name),
     path('equipment/<int:pk>', EquipmentDetail.as_view(), name=EquipmentDetail.name),

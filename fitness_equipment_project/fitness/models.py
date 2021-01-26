@@ -12,7 +12,6 @@ class Equipment(models.Model):
 class Rating(models.Model):
     subject = models.CharField(max_length=250)
     value = models.IntegerField()
-    guest = models.ForeignKey(Equipment, on_delete=models.CASCADE)
+    equipment = models.ForeignKey(Equipment, on_delete=models.CASCADE)
     def __str__(self):
         return self.subject
-
